@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.stage.FileChooser?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml" fx:controller="demo.Controller" alignment="center" hgap="10" vgap="10">
+    <padding>
+        <Insets top="25" right="25" bottom="25" left="25"/>
+    </padding>
+
+    <Label text="First Name:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <TextField fx:id="firstNameField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+    <Label text="Last Name:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField fx:id="lastNameField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+    <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+    <Label text="Confirm Password:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+    <PasswordField fx:id="confirmPasswordField" onKeyReleased="#handleKeyReleased" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+    <ImageView fx:id="profileImageView" fitHeight="70" GridPane.columnIndex="0" GridPane.rowIndex="5" GridPane.rowSpan="2"/>
+    <Button text="Choose File" onAction="#handleChooseFile" GridPane.columnIndex="0" GridPane.rowIndex="7"/>
+
+    <Label fx:id="matchingPassword" styleClass="my-label"  GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.halignment="CENTER"></Label>
+
+
+    <Button text="Register" onAction="#handleRegister" GridPane.columnIndex="1" GridPane.rowIndex="7" GridPane.halignment="RIGHT"/>
+</GridPane>

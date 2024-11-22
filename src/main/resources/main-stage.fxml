@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      spacing="30" alignment="CENTER" fx:controller="demo.Controller">
+      <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+      </padding>
+    <VBox spacing="10" alignment="CENTER">
+    <Label>Press login to login</Label>
+    <Button text="Login" fx:id="loginButton" onAction="#clickOnLogin"/>
+    </VBox>
+    <VBox spacing="10" alignment="CENTER">
+    <Label>Press Register to register</Label>
+    <Button text="Register" fx:id="registerButton" onAction="#clickOnRegister"/>
+    </VBox>
+</VBox>

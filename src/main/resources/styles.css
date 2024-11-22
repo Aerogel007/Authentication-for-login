@@ -1,0 +1,8 @@
+
+/* Change the text color for a specific label class */
+.label.my-label {
+    -fx-text-fill: #df1919; /* Cool teal color */
+    -fx-font-size: 12px;
+    font-size: large;
+
+}
