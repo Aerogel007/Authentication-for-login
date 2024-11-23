@@ -31,8 +31,12 @@ public class Main extends Application {
 
         AuthenticationLogic authenticationLogic = new AuthenticationLogic();
         authenticationLogic.setStages();
+        if (AuthenticationLogic.registerLoader !=null){
+            System.out.println("register Loader is not null");
+        }
+        System.out.println("testing");
     }
-
+   
     public static void main(String[] args) {
         try {
             launch(args);

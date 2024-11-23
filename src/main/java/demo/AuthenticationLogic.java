@@ -19,14 +19,25 @@ public class AuthenticationLogic {
     public static Stage confirmationStage = new Stage();
     public static String path;
     public static Stage profileStage = new Stage();
+    public static FXMLLoader registerLoader;
+    public static String registerController;
    
 
     public void setStages() throws Exception {
 
         // Load the register FXML file
-        Parent rootRegister = FXMLLoader.load(getClass().getResource("/register.fxml"));
+        //here fxml loader is an object that is ready to load or inject the fxml file/UI and create a Controller instance into the program. but doesn't untill .load() is called.
+        //we load it using .load() method. this is when those objects are instantiated.
+        //and parent is the root node of that fxml UI elements. aka Gridpane in this case so regsiterLoader.load return a refernce to that FXML object
+    
+        registerLoader = new FXMLLoader (getClass().getResource("/register.fxml"));
+
+        Parent rootRegister = registerLoader.load(); //controller and fxml object is created here
+        System.out.println(registerController);
+
         Scene sceneRegister = new Scene(rootRegister, 400, 400);
         sceneRegister.getStylesheets().add(getClass().getResource("/styles.css").toExternalForm());
+
 
         registerStage.setScene(sceneRegister);
         registerStage.setTitle("Authentication");
@@ -36,6 +47,7 @@ public class AuthenticationLogic {
         Scene sceneLogin = new Scene(rootLogin, 300, 200);
         loginStage.setScene(sceneLogin);
         loginStage.setTitle("Login");
+        
 
         // Load the second FXML file
         Parent rootConfirmation = FXMLLoader.load(getClass().getResource("/confirmation.fxml"));
